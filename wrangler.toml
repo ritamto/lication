@@ -1,0 +1,7 @@
+name = "lication"
+main = "backend/src/index.worker.ts"
+compatibility_date = "2026-09-01"
+
+[assets]
+binding = "ASSETS"
+directory = "frontend/dist"

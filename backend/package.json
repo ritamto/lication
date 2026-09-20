@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently -k -n frontend,backend -c blue,green \"cd ../frontend && npm run dev\" \"tsx watch src/index.node.ts\"",
+    "build": "tsc",
+    "build:frontend": "cd ../frontend && npm install && npm run build",
+    "start": "npm run build:frontend && npm run build && node dist/index.node.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@hono/node-server": "^2.1.1",
+    "hono": "^4.13.8"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "concurrently": "^10.0.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
