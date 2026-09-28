@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool HTML Features</title>
+    <style>
+        :root {
+            --bg: #0d0e15;
+            --card-bg: #181a27;
+            --accent: #7000ff;
+            --accent-glow: #a366ff;
+            --text: #f4f4f7;
+            --text-muted: #8b92b6;
+            --border: #2c2f48;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #fff;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 12px;
+        }
+
+        .section {
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* 1. Editable Text Box */
+        .editable-box {
+            background: #090a0f;
+            border: 1px dashed var(--accent-glow);
+            padding: 12px;
+            border-radius: 8px;
+            color: #e2e8f0;
+            outline: none;
+            cursor: text;
+            transition: background 0.2s;
+        }
+        .editable-box:focus {
+            background: #141622;
+        }
+
+        /* 2. Custom Native Meter & Progress */
+        meter, progress {
+            width: 100%;
+            height: 20px;
+            display: block;
+            margin-top: 4px;
+        }
+        
+        /* 3. Datalist / Auto-complete Input */
+        input[list] {
+            width: 100%;
+            padding: 10px;
+            background: #090a0f;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: #fff;
+            box-sizing: border-box;
+            outline: none;
+        }
+        input[list]:focus {
+            border-color: var(--accent);
+        }
+
+        /* 4. Native Accordion (Details & Summary) */
+        details {
+            background: #11131c;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        summary {
+            padding: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            background: #141724;
+            user-select: none;
+            outline: none;
+        }
+        details[open] summary {
+            border-bottom: 1px solid var(--border);
+        }
+        .details-content {
+            padding: 12px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        mark {
+            background: var(--accent);
+            color: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>HTML5 Power Features</h2>
+
+        <!-- Feature 1: Content Editable -->
+        <div class="section">
+            <label>1. Live Editable Element (Click to Type)</label>
+            <p class="editable-box" contenteditable="true">This paragraph uses the native <b>contenteditable</b> attribute. Click directly inside this box to delete, change, or add your own text!</p>
+        </div>
+
+        <!-- Feature 2: Native Data List -->
+        <div class="section">
+            <label for="framework-input">2. Auto-Complete (Type 'R' or 'V')</label>
+            <input list="frameworks" id="framework-input" placeholder="Choose a framework...">
+            <datalist id="frameworks">
+                <option value="React">
+                <option value="Vue.js">
+                <option value="Svelte">
+                <option value="Angular">
+                <option value="SolidJS">
+            </datalist>
+        </div>
+
+        <!-- Feature 3: Native Meter Widget -->
+        <div class="section">
+            <label>3. Native Semantic Meter</label>
+            <meter min="0" max="100" low="30" high="80" optimum="90" value="85"></meter>
+        </div>
+
+        <!-- Feature 4: Collapsible Details Accordion -->
+        <div class="section">
+            <label>4. Zero-JavaScript Accordion</label>
+            <details>
+                <summary>Click to Expand</summary>
+                <div class="details-content">
+                    This collapse effect uses the native HTML5 <mark>&lt;details&gt;</mark> and <mark>&lt;summary&gt;</mark> tags. Absolutely zero lines of JavaScript or complex CSS toggles are needed to make this function work perfectly.
+                </div>
+            </details>
+        </div>
+    </div>
+
+</body>
+</html>
