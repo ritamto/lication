@@ -1,0 +1,7 @@
+:80 {
+        root * /var/www/lication
+
+        file_server {
+                hide .git .env Caddyfile
+        }
+}
