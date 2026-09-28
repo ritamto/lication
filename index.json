@@ -5,6 +5,16 @@
   "skills": ["Python", "JavaScript", "SQL"],
   "address": {
     "city": "New York",
-    "zipCode": "10001"
+    "zipCode": "10001",
+    "quotes": [
+      {
+        "text": "The only limit to our realization of tomorrow is our doubts of today.",
+        "author": "Franklin D. Roosevelt"
+      },
+      {
+        "text": "In the middle of every difficulty lies opportunity.",
+        "author": "Albert Einstein"
+      }
+    ]
   }
 }
