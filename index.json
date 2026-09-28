@@ -1,0 +1,10 @@
+{
+  "name": "Alex Mercer",
+  "age": 28,
+  "isEmployee": true,
+  "skills": ["Python", "JavaScript", "SQL"],
+  "address": {
+    "city": "New York",
+    "zipCode": "10001"
+  }
+}
