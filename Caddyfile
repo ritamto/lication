@@ -1,14 +1,7 @@
 :80 {
-        handle /agent/* {
-                reverse_proxy 127.0.0.1:9000
-        }
+        root * /var/www/lication
 
-        import /etc/caddy/apps/*.caddy
-
-        handle {
-                root * /var/www/lication
-                file_server {
-                        hide .git .env Caddyfile deploy.sh
-                }
+        file_server {
+                hide .git .env Caddyfile deploy.sh
         }
 }
