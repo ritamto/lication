@@ -1,5 +1,6 @@
 :80 {
-        handle /db/* {
+        handle /dbapi/* {
+                uri strip_prefix /dbapi
                 reverse_proxy 127.0.0.1:9100
         }
 
