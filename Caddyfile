@@ -3,6 +3,8 @@
                 reverse_proxy 127.0.0.1:9000
         }
 
+        import /etc/caddy/apps/*.caddy
+
         handle {
                 root * /var/www/lication
                 file_server {
@@ -10,5 +12,3 @@
                 }
         }
 }
-
-import /etc/caddy/apps/*.caddy
