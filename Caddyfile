@@ -1,13 +1,7 @@
 :80 {
         root * /var/www/lication
 
-        handle /api/* {
-                reverse_proxy 127.0.0.1:8000
-        }
-
-        handle {
-                file_server {
-                        hide .git .env Caddyfile deploy.sh
-                }
+        file_server {
+                hide .git .env Caddyfile deploy.sh
         }
 }
