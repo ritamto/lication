@@ -1,13 +1,7 @@
 :80 {
-        handle /dbapi/* {
-                uri strip_prefix /dbapi
-                reverse_proxy 127.0.0.1:9100
-        }
+        root * /var/www/lication
 
-        handle {
-                root * /var/www/lication
-                file_server {
-                        hide .git .env Caddyfile deploy.sh
-                }
+        file_server {
+                hide .git .env Caddyfile deploy.sh
         }
 }
