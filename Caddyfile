@@ -1,9 +1,7 @@
 :80 {
-	root * /var/www/lication
+        root * /var/www/lication
 
-	rewrite /main.py /editor.html
-
-	file_server {
-		hide .git .env Caddyfile deploy.sh
-	}
+        file_server {
+                hide .git .env Caddyfile deploy.sh
+        }
 }
